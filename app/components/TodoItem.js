@@ -23,7 +23,7 @@ const TodoItem = ({text})=>(
         </View>
     </View>
 );
-//여기 바꿈 다시한번
+//여기 바꿈 다시한번  다시한번
 const{width,height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     todoContainer : {
