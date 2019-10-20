@@ -1,11 +1,14 @@
 import React from 'react'
 import {TextInput, StyleSheet} from 'react-native'
 
-const Input = () =>(
+const Input = ({value,changeText,addTodo}) =>(
     <TextInput
+        value = {value}
         style={styles.input}
         placeholder={"오늘 할 일"}
         maxLength={30}
+        onChangeText={changeText}
+        onEndEditing = {addTodo}
         returnKeyType="done"/>
 )
 

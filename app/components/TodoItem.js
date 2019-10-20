@@ -1,21 +1,27 @@
 import React from 'react'
 import {View,Text,StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
 import {AntDesign} from "@expo/vector-icons"
-const TodoItem = ({text})=>(
+const TodoItem = ({text, isComplete, changeComplete, deleteItem})=>(
+    
+    
+   
     <View style={styles.todoContainer}>
+
+
         <View>
             <View style={styles.lineContainer}>
                 <View style={styles.makerow}>
                     
-                    <TouchableOpacity>
-                        <AntDesign name="checkcircle" size={20} style={styles.checkbtn}/>
+                    <TouchableOpacity onPress= {changeComplete}>
+                        <AntDesign name={isComplete?"checkcircle":"frowno"} size={20} style={styles.checkbtn}/>
                     </TouchableOpacity>
+
                     <Text style={styles.todoitem}>
                         {text}
                     </Text>
                 </View>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={deleteItem}>                   
                     <AntDesign name="closecircle" size={20}/>    
                 </TouchableOpacity>    
 
@@ -46,7 +52,11 @@ const styles = StyleSheet.create({
     },
     checkbtn:{
         marginRight:20,
-    }
+    },
+    check : {
+
+    },
+
 })
 
 export default TodoItem
