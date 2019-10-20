@@ -23,7 +23,7 @@ const TodoItem = ({text})=>(
         </View>
     </View>
 );
-
+//여기 바꿈
 const{width,height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     todoContainer : {
